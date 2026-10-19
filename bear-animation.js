@@ -78,7 +78,7 @@ function animate(){
  current += (target-current)*(1-Math.exp(-7*dt));
  const p=current;
  const small=innerWidth<700;
- const extent=screenW*(small?.26:.33);
+ const extent = screenW * (small ? .30 : .40);
  root.position.set(Math.cos(p*Math.PI*2)*extent,screenH*(.21-.32*p),0);
  root.scale.setScalar(small?.7:1);
  // Ét roligt spin hen over hele hjemmesidens længde.
