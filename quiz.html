@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Udforsk om multimediedesign passer til dine interesser med en kort, interaktiv quiz.">
+  <title>Find din retning | Multimediedesign</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="quiz.css">
+  <script src="quiz.js" defer></script>
+</head>
+<body class="dark-mode quiz-page">
+  <div class="background-blobs" aria-hidden="true">
+    <div class="blob blob-purple"></div><div class="blob blob-blue"></div><div class="blob blob-green"></div>
+  </div>
+  <header class="quiz-header">
+    <a href="index.html" class="quiz-brand" aria-label="Tilbage til forsiden">
+      <span class="quiz-brand-icon">M</span><span class="quiz-brand-text"><small>MULTIMEDIE</small><strong>DESIGN</strong></span>
+    </a>
+    <nav class="quiz-header-actions" aria-label="Sidenavigation">
+      <a href="index.html" class="quiz-back"><span aria-hidden="true">←</span> Forside</a>
+      <button id="themeToggle" class="quiz-theme" type="button" aria-label="Skift mellem mørkt og lyst tema" title="Skift tema"><span id="themeIcon">☀</span></button>
+    </nav>
+  </header>
+
+  <main class="quiz-main" id="main">
+    <section class="quiz-intro" aria-labelledby="introTitle" id="introPanel">
+      <span class="quiz-eyebrow"><span class="quiz-status-dot"></span> DIN DIGITALE FREMTID</span>
+      <h1 id="introTitle">Kunne multimediedesign <span class="quiz-gradient">være noget for dig?</span></h1>
+      <p>Du behøver ikke allerede at kunne kode eller designe. Find ud af hvilke dele af uddannelsen, der matcher din nysgerrighed.</p>
+      <div class="quiz-meta"><span>✦ 8 korte spørgsmål</span><span>◷ Cirka 2 minutter</span><span>✓ Intet rigtigt eller forkert</span></div>
+      <button id="startButton" class="quiz-primary" type="button">Start quizzen <span aria-hidden="true">→</span></button>
+    </section>
+
+    <section id="questionPanel" class="quiz-shell" aria-label="Spørgsmål" hidden>
+      <div class="quiz-topline"><span id="stepLabel">SPØRGSMÅL 1 AF 8</span><span id="progressLabel">13%</span></div>
+      <div class="quiz-progress" role="progressbar" id="progressBar" aria-label="Quiz-fremdrift" aria-valuemin="0" aria-valuemax="8" aria-valuenow="1"><div id="progressFill"></div></div>
+      <div class="quiz-question-card">
+        <div class="quiz-question-icon" id="questionIcon" aria-hidden="true">✦</div>
+        <h2 id="questionTitle" tabindex="-1"></h2>
+        <p id="questionDescription" class="quiz-question-description"></p>
+        <div id="answerGrid" class="quiz-answer-grid" role="group" aria-label="Vælg et svar"></div>
+      </div>
+      <div class="quiz-bottomline">
+        <button type="button" id="backButton" class="quiz-secondary">← Tilbage</button>
+        <button type="button" id="nextButton" class="quiz-primary" disabled>Næste spørgsmål →</button>
+      </div>
+    </section>
+
+    <section id="resultPanel" class="quiz-result" aria-labelledby="resultHeading" hidden>
+      <span class="quiz-eyebrow"><span class="quiz-status-dot"></span> DIT RESULTAT</span>
+      <h2 id="resultHeading" tabindex="-1">Din kreative profil</h2>
+      <p id="resultLead" class="quiz-result-lead"></p>
+      <div class="quiz-score-layout">
+        <div class="quiz-score-circle" id="scoreCircle" role="img" aria-label="Dit vejledende interessematch">
+          <div><strong id="scoreValue">0%</strong><span>interessematch</span></div>
+        </div>
+        <div class="quiz-score-copy">
+          <span class="quiz-kicker">DIT VEJLEDENDE MATCH</span>
+          <h3 id="matchTitle"></h3>
+          <p id="matchText"></p>
+        </div>
+      </div>
+      <div class="quiz-profile-card">
+        <h3>Dine interesseområder</h3>
+        <p>Se hvilke områder af multimediedesign dine svar peger imod.</p>
+        <div id="categoryBars" class="quiz-category-bars"></div>
+      </div>
+      <div class="quiz-nextsteps">
+        <h3>Hvad kan du undersøge nu?</h3>
+        <p id="nextStepText"></p>
+        <div class="quiz-result-actions">
+          <a class="quiz-primary quiz-link-button" href="index.html#kompetencer">Udforsk kompetencerne <span aria-hidden="true">→</span></a>
+          <a class="quiz-secondary quiz-link-button" href="https://www.ug.dk/videregaaende-uddannelser/erhvervsakademiuddannelser/multimediedesigner" target="_blank" rel="noopener noreferrer">Læs om uddannelsen ↗</a>
+          <button class="quiz-secondary" id="restartButton" type="button">↻ Prøv igen</button>
+        </div>
+      </div>
+      <p class="quiz-disclaimer">Procenten er beregnet ud fra svarene i denne quiz og de valgte spørgsmål – ikke ud fra validerede optagelsesdata eller en måling af dine evner. Et lavt match betyder ikke, at uddannelsen er udelukket.</p>
+    </section>
+  </main>
+  <footer class="quiz-footer"><span>Multimediedesign · Et projekt om datadrevet UX</span><a href="index.html">Tilbage til forsiden ↗</a></footer>
+</body>
+</html>

@@ -1,757 +1,375 @@
 <!DOCTYPE html>
 <html lang="da">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multimediedesign</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  </head>
+  <body class="dark-mode">
 
-  <title>Multimediedesign</title>
-
-  <link rel="stylesheet" href="style.css">
-
-  <!-- Font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-</head>
-
-<body class="dark-mode">
-
-<!-- BAGGRUNDSFARVER -->
-<div class="background-blobs">
-  <div class="blob blob-purple"></div>
-  <div class="blob blob-blue"></div>
-  <div class="blob blob-green"></div>
-</div>
-
-
-<!-- HEADER -->
-<header class="header glass">
-
-  <a href="#" class="logo">
-    <div class="logo-icon">M</div>
-
-    <div class="logo-text">
-      <span>MULTIMEDIE</span>
-      <strong>DESIGN</strong>
+    <!-- BAGGRUNDSFARVER -->
+    <div class="background-blobs">
+      <div class="blob blob-purple"></div>
+      <div class="blob blob-blue"></div>
+      <div class="blob blob-green"></div>
     </div>
-  </a>
 
-
-  <nav class="desktop-nav">
-    <a href="#uddannelse">Uddannelsen</a>
-    <a href="#kompetencer">Kompetencer</a>
-    <a href="#data">Data</a>
-    <a href="#quiz">Find ud af mere</a>
-  </nav>
-
-
-  <!-- MENU -->
-  <div class="menu-container">
-
-    <button
-            class="menu-button clay-button"
-            id="menuButton"
-            aria-label="Åbn menu"
-    >
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-
-
-    <div class="menu-dropdown glass" id="menuDropdown">
-
-      <p class="menu-title">
-        Indstillinger
-      </p>
-
-      <div class="theme-selector">
-
-        <button
-                class="theme-option active"
-                data-theme="dark"
-        >
-          <span class="theme-icon">☾</span>
-
-          <div>
-            <strong>Dark mode</strong>
-            <small>Mørkt digitalt design</small>
-          </div>
+    <!-- HEADER -->
+    <header class="header glass">
+      <a href="#" class="logo">
+        <div class="logo-icon">M</div>
+        <div class="logo-text"><span>MULTIMEDIE</span> <strong>DESIGN</strong></div>
+      </a>
+      <nav class="desktop-nav">
+        <a href="#uddannelse">Uddannelsen</a>
+        <a href="#kompetencer">Kompetencer</a>
+        <a href="#data">Data</a>
+        <a href="#quiz">Find ud af mere</a>
+      </nav>
+      <div class="header-actions">
+        <button class="header-theme-toggle clay-button" id="themeToggleButton" aria-label="Skift mellem dark mode og light mode" title="Skift tema" type="button">
+          <span class="theme-toggle-icon" aria-hidden="true">☀</span>
+          <span class="theme-toggle-label">Light mode</span>
         </button>
+      </div>
+    </header>
+    <main>
 
-
-        <button
-                class="theme-option"
-                data-theme="light"
-        >
-          <span class="theme-icon">☀</span>
-
-          <div>
-            <strong>Light mode</strong>
-            <small>Lyst og minimalistisk</small>
+      <!-- HERO -->
+      <section class="hero">
+        <div class="hero-content">
+          <div class="eyebrow"><span></span> En uddannelse med mange veje</div>
+          <h1>Multimediedesign <span class="gradient-text">er mere end design</span></h1>
+          <p class="hero-description">Færre vælger multimediedesignuddannelsen. Men ved de egentlig, hvad uddannelsen kan?</p>
+          <div class="hero-buttons">
+            <a href="#kompetencer" class="primary-button">Udforsk uddannelsen <span>→</span></a>
+            <a href="#data" class="secondary-button">Se data</a>
           </div>
-        </button>
-
-      </div>
-
-    </div>
-  </div>
-
-</header>
-
-
-
-<main>
-
-  <!-- HERO -->
-  <section class="hero">
-
-    <div class="hero-content">
-
-      <div class="eyebrow">
-        <span></span>
-        En uddannelse med mange veje
-      </div>
-
-      <h1>
-        Multimediedesign
-        <span class="gradient-text">
-                        er mere end design
-                    </span>
-      </h1>
-
-      <p class="hero-description">
-        Færre vælger multimediedesignuddannelsen.
-        Men ved de egentlig, hvad uddannelsen kan?
-      </p>
-
-      <div class="hero-buttons">
-
-        <a href="#kompetencer" class="primary-button">
-          Udforsk uddannelsen
-          <span>→</span>
-        </a>
-
-        <a href="#data" class="secondary-button">
-          Se data
-        </a>
-
-      </div>
-
-
-      <div class="hero-small-stats">
-
-        <div>
-          <strong>Design</strong>
-          <span>Kreativitet</span>
-        </div>
-
-        <div>
-          <strong>Kode</strong>
-          <span>Teknologi</span>
-        </div>
-
-        <div>
-          <strong>UX</strong>
-          <span>Mennesker</span>
-        </div>
-
-      </div>
-
-    </div>
-
-
-    <!-- VISUEL HØJRE SIDE -->
-    <div class="hero-visual">
-
-      <div class="laptop glass">
-
-        <div class="laptop-top">
-
-          <div class="browser-bar">
-            <span></span>
-            <span></span>
-            <span></span>
+          <div class="hero-small-stats">
+            <div><strong>Design</strong> <span>Kreativitet</span></div>
+            <div><strong>Kode</strong> <span>Teknologi</span></div>
+            <div><strong>UX</strong> <span>Mennesker</span></div>
           </div>
+        </div>
 
-          <div class="fake-page">
-
-            <div class="fake-nav"></div>
-
-            <div class="fake-content">
-              <div class="fake-text"></div>
-              <div class="fake-text small"></div>
-
-              <div class="fake-cards">
-                <div></div>
-                <div></div>
-                <div></div>
+        <!-- VISUEL HØJRE SIDE -->
+        <div class="hero-visual">
+          <div class="laptop glass">
+            <div class="laptop-top">
+              <div class="browser-bar"><span></span> <span></span> <span></span></div>
+              <div class="fake-page">
+                <div class="fake-nav"></div>
+                <div class="fake-content">
+                  <div class="fake-text"></div>
+                  <div class="fake-text small"></div>
+                  <div class="fake-cards">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                  </div>
+                </div>
               </div>
             </div>
-
+            <div class="laptop-bottom"></div>
           </div>
-
+          <div class="floating-card floating-purple"><span>✦</span> Kreativitet</div>
+          <div class="floating-card floating-blue"><span>&lt;/&gt;</span> Teknologi</div>
+          <div class="floating-card floating-green"><span>◉</span> Muligheder</div>
         </div>
+      </section>
 
-        <div class="laptop-bottom"></div>
-
-      </div>
-
-
-      <div class="floating-card floating-purple">
-        <span>✦</span>
-        Kreativitet
-      </div>
-
-      <div class="floating-card floating-blue">
-        <span>&lt;/&gt;</span>
-        Teknologi
-      </div>
-
-      <div class="floating-card floating-green">
-        <span>◉</span>
-        Muligheder
-      </div>
-
-    </div>
-
-  </section>
-
-
-
-  <!-- INTRO -->
-  <section class="intro-section glass-section" id="uddannelse">
-
-    <div class="section-tag">
-      UDDANNELSEN
-    </div>
-
-
-    <div class="intro-grid">
-
-      <div class="intro-text">
-
-        <h2>
-          Én uddannelse.
-          <span>Mange retninger.</span>
-        </h2>
-
-        <p>
-          Multimediedesign handler ikke kun om at få ting til
-          at se flotte ud. Uddannelsen kombinerer teknologi,
-          kreativitet, kommunikation, brugeroplevelser,
-          data og digital produktion.
-        </p>
-
-      </div>
-
-
-      <div class="mini-cards">
-
-        <!-- KREATIVITET -->
-        <div class="career-wrapper">
-
-          <button
-                  class="mini-card purple-card career-main-card"
-                  data-career="creative"
-          >
-
-            <div class="mini-icon">✦</div>
-
-            <strong>Kreativitet</strong>
-
+      <!-- INTRO -->
+      <section class="intro-section glass-section" id="uddannelse">
+        <div class="section-tag">UDDANNELSEN</div>
+        <div class="intro-grid">
+          <div class="intro-text">
+            <h2>En uddannelse. <span>Mange retninger.</span></h2>
             <p>
-              Design og visuelle digitale oplevelser.
+              Multimediedesign handler ikke kun om at få ting til at se flotte ud. Uddannelsen kombinerer teknologi, kreativitet, kommunikation, brugeroplevelser, data og digital produktion.
             </p>
-
-          </button>
-
-
-          <div class="career-floating-cards">
-
-            <div class="career-float float-one purple-float">
-              UI Designer
-            </div>
-
-            <div class="career-float float-two purple-float">
-              Grafisk designer
-            </div>
-
-            <div class="career-float float-three purple-float">
-              Content Creator
-            </div>
-
           </div>
-
-        </div>
-
-
-
-        <!-- TEKNOLOGI -->
-        <div class="career-wrapper">
-
-          <button
-                  class="mini-card blue-card career-main-card"
-                  data-career="technology"
-          >
-
-            <div class="mini-icon">&lt;/&gt;</div>
-
-            <strong>Teknologi</strong>
-
-            <p>
-              Kode, websites og interaktive løsninger.
-            </p>
-
-          </button>
-
-
-          <div class="career-floating-cards">
-
-            <div class="career-float float-one blue-float">
-              Frontend Developer
+          <div class="mini-cards">
+            <!-- KREATIVITET -->
+            <div class="career-wrapper">
+              <button class="mini-card purple-card career-main-card" data-career="creative">
+                <div class="mini-icon">✦</div>
+                <strong>Kreativitet</strong>
+                <p>Design og visuelle digitale oplevelser.</p>
+              </button>
+              <div class="career-floating-cards">
+                <div class="career-float float-one purple-float">UI Designer</div>
+                <div class="career-float float-two purple-float">Grafisk designer</div>
+                <div class="career-float float-three purple-float">Content Creator</div>
+              </div>
             </div>
-
-            <div class="career-float float-two blue-float">
-              Webudvikler
+            <!-- TEKNOLOGI -->
+            <div class="career-wrapper">
+              <button class="mini-card blue-card career-main-card" data-career="technology">
+                <div class="mini-icon">&lt;/&gt;</div>
+                <strong>Teknologi</strong>
+                <p>Kode, websites og interaktive løsninger.</p>
+              </button>
+              <div class="career-floating-cards">
+                <div class="career-float float-one blue-float">Frontend Developer</div>
+                <div class="career-float float-two blue-float">Webudvikler</div>
+                <div class="career-float float-three blue-float">UX Designer</div>
+              </div>
             </div>
-
-            <div class="career-float float-three blue-float">
-              UX Designer
+            <!-- MULIGHEDER -->
+            <div class="career-wrapper">
+              <button class="mini-card green-card career-main-card" data-career="other">
+                <div class="mini-icon">↗</div>
+                <strong>Muligheder</strong>
+                <p>Mange retninger efter uddannelsen.</p>
+              </button>
+              <div class="career-floating-cards">
+                <div class="career-float float-one green-float">Projektleder</div>
+                <div class="career-float float-two green-float">Digital Marketing</div>
+                <div class="career-float float-three green-float">Selvstændig</div>
+              </div>
             </div>
-
           </div>
-
         </div>
+      </section>
 
-
-
-        <!-- MULIGHEDER -->
-        <div class="career-wrapper">
-
-          <button
-                  class="mini-card green-card career-main-card"
-                  data-career="other"
-          >
-
-            <div class="mini-icon">↗</div>
-
-            <strong>Muligheder</strong>
-
-            <p>
-              Mange retninger efter uddannelsen.
-            </p>
-
-          </button>
-
-
-          <div class="career-floating-cards">
-
-            <div class="career-float float-one green-float">
-              Projektleder
-            </div>
-
-            <div class="career-float float-two green-float">
-              Digital Marketing
-            </div>
-
-            <div class="career-float float-three green-float">
-              Selvstændig
-            </div>
-
+      <!-- KOMPETENCER -->
+      <section class="skills-section" id="kompetencer">
+        <div class="section-heading">
+          <div>
+            <div class="section-tag">KOMPETENCER</div>
+            <h2>Mere end bare <span>design</span></h2>
           </div>
-
+          <p>Du arbejder på tværs af kreative, tekniske og analytiske områder.</p>
         </div>
+        <div class="skills-grid">
+          <!-- KODNING -->
+          <article class="skill-card clay-card">
+            <div class="skill-top">
+              <div class="skill-icon purple">&lt;/&gt;</div>
+              <span class="number">01</span>
+            </div>
+            <div>
+              <h3>Kodning</h3>
+              <p>Byg responsive websites og digitale oplevelser med HTML, CSS og JavaScript.</p>
+            </div>
+            <div class="skill-line purple-line"></div>
+          </article>
+          <!-- VIDEO -->
+          <article class="skill-card clay-card">
+            <div class="skill-top">
+              <div class="skill-icon blue">▶</div>
+              <span class="number">02</span>
+            </div>
+            <div>
+              <h3>Video &amp; content</h3>
+              <p>Arbejd med storytelling, billeder, video, animation og digitalt indhold.</p>
+            </div>
+            <div class="skill-line blue-line"></div>
+          </article>
 
-      </div>
-
-    </div>
-
-  </section>
-
-
-
-  <!-- KOMPETENCER -->
-  <section class="skills-section" id="kompetencer">
-
-    <div class="section-heading">
-
-      <div>
-        <div class="section-tag">
-          KOMPETENCER
+          <!-- DATA -->
+          <article class="skill-card clay-card">
+            <div class="skill-top">
+              <div class="skill-icon green">◫</div>
+              <span class="number">03</span>
+            </div>
+            <div>
+              <h3>Data</h3>
+              <p>Brug brugerdata, research og tests til at træffe bedre designbeslutninger.</p>
+            </div>
+            <div class="skill-line green-line"></div>
+          </article>
+          <!-- UX -->
+          <article class="skill-card clay-card">
+            <div class="skill-top">
+              <div class="skill-icon purple">◎</div>
+              <span class="number">04</span>
+            </div>
+            <div>
+              <h3>UX</h3>
+              <p>Forstå brugerne og design løsninger, der faktisk giver mening for dem.</p>
+            </div>
+            <div class="skill-line purple-line"></div>
+          </article>
+          <!-- MARKETING -->
+          <article class="skill-card clay-card">
+            <div class="skill-top">
+              <div class="skill-icon blue">◢</div>
+              <span class="number">05</span>
+            </div>
+            <div>
+              <h3>Marketing</h3>
+              <p>KommunikEr digitale produkter og skab indhold til forskellige målgrupper.</p>
+            </div>
+            <div class="skill-line blue-line"></div>
+          </article>
         </div>
-
-        <h2>
-          Mere end bare
-          <span>design</span>
-        </h2>
-      </div>
-
-      <p>
-        Du arbejder på tværs af kreative,
-        tekniske og analytiske områder.
-      </p>
-
-    </div>
-
-
-    <div class="skills-grid">
-
-      <!-- KODNING -->
-      <article class="skill-card clay-card">
-
-        <div class="skill-top">
-          <div class="skill-icon purple">
-            &lt;/&gt;
-          </div>
-
-          <span class="number">01</span>
-        </div>
-
-        <div>
-          <h3>Kodning</h3>
-
-          <p>
-            Byg responsive websites og digitale
-            oplevelser med HTML, CSS og JavaScript.
-          </p>
-        </div>
-
-        <div class="skill-line purple-line"></div>
-
-      </article>
-
-
-      <!-- VIDEO -->
-      <article class="skill-card clay-card">
-
-        <div class="skill-top">
-          <div class="skill-icon blue">
-            ▶
-          </div>
-
-          <span class="number">02</span>
-        </div>
-
-        <div>
-          <h3>Video & content</h3>
-
-          <p>
-            Arbejd med storytelling, billeder,
-            video, animation og digitalt indhold.
-          </p>
-        </div>
-
-        <div class="skill-line blue-line"></div>
-
-      </article>
-
+      </section>
 
       <!-- DATA -->
-      <article class="skill-card clay-card">
-
-        <div class="skill-top">
-          <div class="skill-icon green">
-            ◫
-          </div>
-
-          <span class="number">03</span>
-        </div>
-
-        <div>
-          <h3>Data</h3>
-
-          <p>
-            Brug brugerdata, research og tests til
-            at træffe bedre designbeslutninger.
-          </p>
-        </div>
-
-        <div class="skill-line green-line"></div>
-
-      </article>
-
-
-      <!-- UX -->
-      <article class="skill-card clay-card">
-
-        <div class="skill-top">
-          <div class="skill-icon purple">
-            ◎
-          </div>
-
-          <span class="number">04</span>
-        </div>
-
-        <div>
-          <h3>UX</h3>
-
-          <p>
-            Forstå brugerne og design løsninger,
-            der faktisk giver mening for dem.
-          </p>
-        </div>
-
-        <div class="skill-line purple-line"></div>
-
-      </article>
-
-
-      <!-- MARKETING -->
-      <article class="skill-card clay-card">
-
-        <div class="skill-top">
-          <div class="skill-icon blue">
-            ◢
-          </div>
-
-          <span class="number">05</span>
-        </div>
-
-        <div>
-          <h3>Marketing</h3>
-
-          <p>
-            Kommunikér digitale produkter og skab
-            indhold til forskellige målgrupper.
-          </p>
-        </div>
-
-        <div class="skill-line blue-line"></div>
-
-      </article>
-
-    </div>
-
-  </section>
-
-
-
-  <!-- DATA -->
-  <section class="data-section" id="data">
-
-    <div class="section-heading">
-
-      <div>
-        <div class="section-tag">
-          DATA
-        </div>
-
-        <h2>
-          Hvorfor vælger færre
-          <span>uddannelsen?</span>
-        </h2>
-      </div>
-
-      <p>
-        Data kan hjælpe os med at forstå,
-        hvad potentielle studerende tænker.
-      </p>
-
-    </div>
-
-
-    <div class="data-grid">
-
-      <!-- GRAF -->
-      <article class="chart-card clay-card">
-
-        <div class="card-heading">
+      <section class="data-section" id="data">
+        <div class="section-heading">
           <div>
-            <small>UDVIKLING</small>
-            <h3>Interesse over tid</h3>
+            <div class="section-tag">DATA</div>
+            <h2>Hvorfor vælger færre <span>uddannelsen?</span></h2>
           </div>
-
-          <div class="data-badge">
-            ↓ faldende
-          </div>
+          <p>Løn og videreuddannelse kan være med til at vise, hvilke muligheder der åbner sig efter multimediedesign.</p>
         </div>
+        <div class="data-grid">
 
+          <!-- GRAF -->
+          <article class="chart-card clay-card salary-chart-card">
+            <div class="card-heading card-heading-stack">
+              <div>
+                <small>LØN &amp; VIDEREUDDANNELSE</small>
+                <h3>Lønniveau efter uddannelsesvalg</h3>
+              </div>
+              <div class="chart-controls" aria-label="Vælg lønvisning">
+                <button class="salary-toggle active" type="button" data-salary-view="entry">Nyuddannet</button>
+                <button class="salary-toggle" type="button" data-salary-view="tenYears">Efter 10 år</button>
+              </div>
+            </div>
+            <p class="chart-description">
+              Sammenlign typisk månedsløn for multimediedesign og udvalgte videreuddannelser, du kan bygge videre med bagefter.
+            </p>
+            <div class="chart salary-chart" id="salaryChart">
+              <div class="chart-column salary-column highlighted" data-entry="26600" data-ten-years="38000">
+                <strong class="chart-value">26.600 kr</strong>
+                <span>MMD</span>
+              </div>
+              <div class="chart-column salary-column" data-entry="30450" data-ten-years="42500">
+                <strong class="chart-value">30.450 kr</strong>
+                <span>
+                  Digital koncept-
+                  <br>
+                  udvikling
+                </span>
+              </div>
+              <div class="chart-column salary-column" data-entry="35400" data-ten-years="52400">
+                <strong class="chart-value">35.400 kr</strong>
+                <span>Webudvikling</span>
+              </div>
+              <div class="chart-column salary-column" data-entry="29400" data-ten-years="37300">
+                <strong class="chart-value">29.400 kr</strong>
+                <span>
+                  Design &amp;
+                  <br>
+                  business
+                </span>
+              </div>
+              <div class="chart-column salary-column" data-entry="31500" data-ten-years="">
+                <strong class="chart-value">31.500 kr</strong>
+                <span>E-handel</span>
+              </div>
+            </div>
+            <p class="chart-note">
+              Kilde: UddannelsesGuiden (ug.dk)
+            </p>
+          </article>
 
-        <div class="chart">
-
-          <div
-                  class="chart-column"
-                  style="--height: 82%"
-          >
-            <span>2022</span>
-          </div>
-
-          <div
-                  class="chart-column"
-                  style="--height: 72%"
-          >
-            <span>2023</span>
-          </div>
-
-          <div
-                  class="chart-column"
-                  style="--height: 61%"
-          >
-            <span>2024</span>
-          </div>
-
-          <div
-                  class="chart-column"
-                  style="--height: 50%"
-          >
-            <span>2025</span>
-          </div>
-
-          <div
-                  class="chart-column highlighted"
-                  style="--height: 43%"
-          >
-            <span>2026</span>
-          </div>
-
-        </div>
-
-      </article>
-
-
-
-      <!-- PIE -->
-      <article class="chart-card clay-card">
-
-        <div class="card-heading">
-          <div>
-            <small>INDSIGT</small>
-            <h3>Hvad betyder mest?</h3>
-          </div>
-        </div>
-
-
-        <div class="pie-wrapper">
-
-          <div class="pie-chart"></div>
-
-          <div class="legend">
-
-            <div>
-              <span class="legend-color purple-bg"></span>
-              <p>
-                <strong>Kreativitet</strong>
-                Design og idéer
+          <!-- INTERAKTIV RESEARCH -->
+          <article class="chart-card clay-card research-card" aria-label="Indsigter fra målgruppeundersøgelsen">
+            <div class="card-heading">
+              <div>
+                <small>VORES RESEARCH</small>
+                <h3>Hvad tænker de unge?</h3>
+              </div>
+            </div>
+            <p class="research-intro">Udforsk interesser, forventninger og bekymringer ved uddannelsesvalg.</p>
+            <div class="research-tabs" role="tablist" aria-label="Vælg researchtema">
+              <button type="button" class="research-tab active" role="tab" aria-selected="true" data-insight="ai">
+                <span class="research-tab-icon" aria-hidden="true">✦</span>
+                <span>AI</span>
+              </button>
+              <button type="button" class="research-tab" role="tab" aria-selected="false" data-insight="salary">
+                <span class="research-tab-icon" aria-hidden="true">↗</span>
+                <span>Løn</span>
+              </button>
+              <button type="button" class="research-tab" role="tab" aria-selected="false" data-insight="knowledge">
+                <span class="research-tab-icon" aria-hidden="true">◎</span>
+                <span>Kendskab</span>
+              </button>
+            </div>
+            <div class="research-panel" id="researchPanel" role="tabpanel" aria-live="polite">
+              <div class="research-main-stat">
+                <div class="research-stat-copy">
+                  <strong class="research-percent" id="researchPercent">75 %</strong>
+                  <p id="researchDescription">Er bekymrede for, at AI kan overtage arbejdsopgaver.</p>
+                </div>
+                <div class="research-ring" id="researchRing" aria-hidden="true">
+                  <div class="research-ring-hole">✦</div>
+                </div>
+              </div>
+              <div class="research-secondary">
+                <div class="research-secondary-head">
+                  <span id="researchSecondaryLabel">Bekymring om jobusikkerhed</span>
+                  <strong id="researchSecondaryValue">50 %</strong>
+                </div>
+                <div class="research-track"><span id="researchSecondaryBar" style="width:50%"></span></div>
+              </div>
+              <blockquote class="research-quote" id="researchQuote">
+                “Noget jeg kan lide at lave med gode jobmuligheder, er mine prioteter”
+              </blockquote>
+              <p class="research-explanation" id="researchExplanation">
+                Indsigten gør det relevant at vise jobperspektiver og skabe en mere nuanceret samtale om AI.
               </p>
             </div>
-
-            <div>
-              <span class="legend-color blue-bg"></span>
-              <p>
-                <strong>Teknologi</strong>
-                Digitale løsninger
-              </p>
-            </div>
-
-            <div>
-              <span class="legend-color green-bg"></span>
-              <p>
-                <strong>Muligheder</strong>
-                Fremtid og karriere
-              </p>
-            </div>
-
-          </div>
-
+            <p class="research-footnote">
+              Kilde: Egen målgruppeundersøgelse og interviews. Indikationer, ikke repræsentative resultater.
+              <button type="button" id="researchMethodButton" class="research-method-button" aria-expanded="false" aria-controls="researchMethodDetails">
+                Om data
+              </button>
+            </p>
+            <p class="research-method-details" id="researchMethodDetails" hidden="">
+              Spørgeskema med 8 besvarelser og 3 kvalitative interviews. Tallene beskriver kun denne undersøgelse og kan ikke generaliseres til alle unge. Ved spørgsmål med flere svarmuligheder kan procenterne overlappe.
+            </p>
+          </article>
         </div>
+      </section>
 
-      </article>
+      <!-- QUIZ -->
+      <section class="quiz-section glass-section" id="quiz">
+        <div class="quiz-content">
+          <div class="section-tag">HVAD PASSER TIL DIG?</div>
+          <h2>Er multimediedesign <span>noget for dig?</span></h2>
+          <p>
+            Kreativ? Teknisk? Nysgerrig på mennesker, digitale medier eller kommunikation? Find ud af hvilke områder der passer bedst til dig.
+          </p>
+          <a class="primary-button quiz-button" href="quiz.html">Start interessequiz <span>→</span></a>
+        </div>
+        <div class="quiz-orbit">
+          <div class="orbit-circle">
+            <div class="orbit-center">?</div>
+            <div class="orbit-item orbit-one">✦</div>
+            <div class="orbit-item orbit-two">&lt;/&gt;</div>
+            <div class="orbit-item orbit-three">◉</div>
+          </div>
+        </div>
+      </section>
+    </main>
 
-    </div>
-
-  </section>
-
-
-
-  <!-- QUIZ -->
-  <section class="quiz-section glass-section" id="quiz">
-
-    <div class="quiz-content">
-
-      <div class="section-tag">
-        HVAD PASSER TIL DIG?
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-logo">
+        <div class="logo-icon">M</div>
+        <span>Multimediedesign</span>
       </div>
-
-      <h2>
-        Er multimediedesign
-        <span>noget for dig?</span>
-      </h2>
-
-      <p>
-        Kreativ? Teknisk? Nysgerrig på mennesker,
-        digitale medier eller kommunikation?
-        Find ud af hvilke områder der passer bedst til dig.
-      </p>
-
-      <button class="primary-button quiz-button">
-        Start interessequiz
-        <span>→</span>
-      </button>
-
-    </div>
-
-
-    <div class="quiz-orbit">
-
-      <div class="orbit-circle">
-
-        <div class="orbit-center">
-          ?
-        </div>
-
-        <div class="orbit-item orbit-one">
-          ✦
-        </div>
-
-        <div class="orbit-item orbit-two">
-          &lt;/&gt;
-        </div>
-
-        <div class="orbit-item orbit-three">
-          ◉
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-</main>
-
-
-
-<!-- FOOTER -->
-<footer>
-
-  <div class="footer-logo">
-    <div class="logo-icon">M</div>
-
-    <span>
-                Multimediedesign
-            </span>
-  </div>
-
-  <p>
-    Et projekt om uddannelsesvalg,
-    muligheder og multimediedesign.
-  </p>
-
-</footer>
-
-
-<script src="script.js"></script>
-
-<script type="importmap">
-  {
-    "imports": {
-      "three": "https://cdn.jsdelivr.net/npm/three@0.164.1/build/three.module.js",
-      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.164.1/examples/jsm/"
-    }
-  }
-</script>
-<script type="module" src="./bear-animation.js"></script>
-
-</body>
+      <p>Et projekt om uddannelsesvalg, muligheder og multimediedesign.</p>
+    </footer>
+    <script src="script.js"></script>
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.164.1/build/three.module.js",
+          "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.164.1/examples/jsm/"
+        }
+      }
+    </script>
+    <script type="module" src="./bear-animation.js"></script>
+  </body>
 </html>

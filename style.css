@@ -2529,7 +2529,7 @@ footer {
 
 
     /* ========================================
-       INTRO: TRE RETNINGSKORT I ÉN RÆKKE
+       INTRO: TRE RETNINGSKORT I EN RÆKKE
     ======================================== */
 
     .intro-grid {
@@ -3505,3 +3505,267 @@ footer {
 
 }
 
+
+
+/* ==========================================================
+   OPDATERING — DIREKTE TEMA-KNAP + LØNCHART
+========================================================== */
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.header-theme-toggle {
+    min-width: 44px;
+    height: 44px;
+    padding: 0 14px;
+    border: none;
+    border-radius: 14px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+    color: var(--text);
+    background: var(--card);
+    box-shadow: var(--shadow-small);
+    transition: transform var(--transition), background var(--transition), color var(--transition);
+}
+
+.header-theme-toggle:hover {
+    transform: translateY(-2px);
+}
+
+.theme-toggle-icon {
+    font-size: 1.1rem;
+    line-height: 1;
+}
+
+.theme-toggle-label {
+    font-size: 0.78rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.card-heading-stack {
+    align-items: flex-start;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.chart-controls {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px;
+    border-radius: 14px;
+    background: var(--surface);
+}
+
+.salary-toggle {
+    border: 1px solid transparent;
+    background: transparent;
+    color: var(--text-muted);
+    min-height: 38px;
+    padding: 0 14px;
+    border-radius: 10px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.salary-toggle:hover {
+    color: var(--text);
+    background: var(--surface-hover);
+}
+
+.salary-toggle.active {
+    color: #fff;
+    background: linear-gradient(135deg, var(--purple), var(--blue));
+    box-shadow: 0 10px 22px rgba(124, 0, 232, 0.18);
+}
+
+.chart-description {
+    margin-top: 18px;
+    color: var(--text-muted);
+    line-height: 1.65;
+    font-size: 0.84rem;
+    max-width: 640px;
+}
+
+.salary-chart-card {
+    min-height: 470px;
+}
+
+.salary-chart {
+    height: 320px;
+    margin-top: 30px;
+    gap: 18px;
+    align-items: end;
+}
+
+.salary-chart .salary-column {
+    min-height: 68px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 12px 10px;
+    overflow: visible;
+}
+
+.salary-chart .salary-column .chart-value {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--text);
+    white-space: nowrap;
+}
+
+.salary-chart .salary-column span {
+    bottom: -62px;
+    left: 50%;
+    width: 108%;
+    transform: translateX(-50%);
+    line-height: 1.25;
+    font-size: 0.62rem;
+    white-space: normal;
+}
+
+.salary-chart .salary-column.no-data {
+    background: linear-gradient(to top, rgba(157, 164, 177, 0.18), rgba(157, 164, 177, 0.35));
+    border: 1px dashed rgba(157, 164, 177, 0.45);
+    box-shadow: none;
+}
+
+.chart-note {
+    margin-top: 78px;
+    color: var(--text-muted);
+    line-height: 1.6;
+    font-size: 0.74rem;
+}
+
+@media (max-width: 1050px) {
+    .theme-toggle-label {
+        display: none;
+    }
+
+    .header-theme-toggle {
+        width: 44px;
+        padding: 0;
+    }
+}
+
+@media (max-width: 800px) {
+    .salary-chart {
+        height: 290px;
+        gap: 12px;
+    }
+
+    .salary-chart .salary-column .chart-value {
+        font-size: 0.62rem;
+        top: -26px;
+    }
+
+    .salary-chart .salary-column span {
+        bottom: -76px;
+        font-size: 0.56rem;
+    }
+
+    .chart-note {
+        margin-top: 92px;
+    }
+}
+
+@media (max-width: 550px) {
+    .header {
+        gap: 10px;
+    }
+
+    .header-actions {
+        margin-left: auto;
+    }
+
+    .card-heading-stack {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .chart-controls {
+        width: 100%;
+        justify-content: stretch;
+    }
+
+    .salary-toggle {
+        flex: 1;
+        padding: 0 10px;
+        font-size: 0.72rem;
+    }
+
+    .salary-chart {
+        gap: 10px;
+        height: 260px;
+    }
+
+    .salary-chart .salary-column {
+        padding: 10px 6px;
+    }
+
+    .salary-chart .salary-column .chart-value {
+        font-size: 0.56rem;
+        top: -24px;
+    }
+
+    .salary-chart .salary-column span {
+        bottom: -82px;
+        font-size: 0.52rem;
+        width: 120%;
+    }
+
+    .chart-note {
+        margin-top: 105px;
+    }
+}
+
+
+
+
+
+/* ========== INTERAKTIV RESEARCH I HØJRE STATISTIKKORT ========== */
+.data-grid { align-items: stretch; }
+.data-grid > .chart-card { min-width: 0; }
+.research-card { display:flex; flex-direction:column; gap:0; }
+.research-card:hover { transform:none; box-shadow:var(--shadow); }
+.research-intro { color:var(--text-muted);font-size:.78rem;line-height:1.55;margin-top:10px; }
+.research-tabs { display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:20px; }
+.research-tab { min-width:0;display:flex;align-items:center;justify-content:center;gap:6px;padding:11px 5px;border-radius:12px;border:1px solid var(--border);background:var(--surface);color:var(--text-muted);font:600 .74rem Inter,sans-serif;cursor:pointer;transition:background .2s,border .2s,color .2s,transform .2s; }
+.research-tab:hover { transform:translateY(-2px);background:var(--surface-hover); }
+.research-tab.active { background:rgba(124,0,232,.16);border-color:var(--purple-light);color:var(--text); }
+.research-tab:focus-visible,.research-method-button:focus-visible { outline:2px solid var(--blue);outline-offset:3px; }
+.research-tab-icon { font-size:1rem; }
+.research-panel { margin-top:16px;background:var(--surface);border:1px solid var(--border);border-radius:19px;padding:19px; }
+.research-main-stat { display:flex;gap:10px;align-items:center;justify-content:space-between; }
+.research-stat-copy { min-width:0;flex:1; }
+.research-percent { font-size:clamp(2.2rem,4.5vw,3.5rem);line-height:1.1;letter-spacing:-2px;color:var(--text);font-weight:800; }
+.research-stat-copy p { font-size:.79rem;line-height:1.6;color:var(--text-muted);margin-top:6px; }
+.research-ring { flex-shrink:0;width:108px;aspect-ratio:1;border-radius:50%;background:conic-gradient(var(--insight-color,#9851ed) var(--insight-value,75%),var(--border) 0);display:grid;place-items:center;transition:background .3s; }
+.research-ring-hole { width:74px;aspect-ratio:1;display:grid;place-items:center;border-radius:50%;background:var(--card);font-size:1.35rem;color:var(--insight-color,#9851ed); }
+.research-secondary { padding-top:15px;margin-top:16px;border-top:1px solid var(--border); }
+.research-secondary-head { display:flex;justify-content:space-between;align-items:center;gap:8px;font-size:.75rem;color:var(--text-muted); }
+.research-secondary-head strong { color:var(--text);white-space:nowrap; }
+.research-track { height:9px;border-radius:99px;background:var(--border);margin-top:10px;overflow:hidden; }
+.research-track span { display:block;height:100%;border-radius:inherit;background:var(--insight-color,#9851ed);transition:width .55s cubic-bezier(.2,.8,.2,1),background .3s; }
+.research-quote { border-left:3px solid var(--insight-color,#9851ed);padding-left:12px;font-size:.78rem;font-style:italic;line-height:1.55;color:var(--text);margin:17px 0 0; }
+.research-explanation { margin-top:12px;color:var(--text-muted);line-height:1.5;font-size:.72rem; }
+.research-footnote { margin-top:auto;padding-top:15px;color:var(--text-muted);font-size:.66rem;line-height:1.5; }
+.research-method-button { color:var(--blue-light);background:none;border:0;text-decoration:underline;cursor:pointer;font:inherit; }
+.research-method-details { margin-top:10px;font-size:.7rem;color:var(--text-muted);line-height:1.6; }
+.research-method-details[hidden] { display:none; }
+@media (max-width:1100px) { .research-ring { width:88px; }.research-ring-hole {width:61px;} .research-panel {padding:15px;} }
+@media (max-width:550px) { .research-tab {font-size:.72rem;} .research-card {padding:23px;} .research-percent {font-size:2.65rem;} }
+@media (prefers-reduced-motion:reduce) { .research-track span,.research-tab {transition:none;} }

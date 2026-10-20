@@ -81,7 +81,7 @@ function animate(){
  const extent = screenW * (small ? .30 : .40);
  root.position.set(Math.cos(p*Math.PI*2)*extent,screenH*(.21-.32*p),0);
  root.scale.setScalar(small?.7:1);
- // Ét roligt spin hen over hele hjemmesidens længde.
+ // Et roligt spin hen over hele hjemmesidens længde.
  spin.rotation.y=p*Math.PI*2;
  spin.rotation.x=Math.sin(p*Math.PI*2)*.11;
  spin.rotation.z=Math.sin(p*Math.PI*4)*.12;
