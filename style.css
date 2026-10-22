@@ -780,6 +780,8 @@ main .clay-card, main .mini-card {
 
 .gradient-text {
 
+    padding-bottom: 8px;
+
     display: block;
 
     color: transparent;
@@ -3769,3 +3771,32 @@ footer {
 @media (max-width:1100px) { .research-ring { width:88px; }.research-ring-hole {width:61px;} .research-panel {padding:15px;} }
 @media (max-width:550px) { .research-tab {font-size:.72rem;} .research-card {padding:23px;} .research-percent {font-size:2.65rem;} }
 @media (prefers-reduced-motion:reduce) { .research-track span,.research-tab {transition:none;} }
+
+
+/* Klik-ikon i de farvede hjørner på karrierekortene */
+.career-main-card .career-click-icon {
+    position: absolute;
+    top: 5px;
+    right: 4px;
+    width: 67px;
+    height: 67px;
+    object-fit: contain;
+    z-index: 2;
+    pointer-events: none;
+    opacity: .95;
+    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, .22));
+    transform: rotate(-10deg);
+    transition: transform .35s ease, opacity .35s ease;
+}
+.career-main-card:hover .career-click-icon,
+.career-main-card.active .career-click-icon {
+    transform: rotate(-10deg) scale(1.12);
+}
+@media (max-width: 550px) {
+    .career-main-card .career-click-icon {
+        width: 55px;
+        height: 55px;
+        top: 5px;
+        right: 5px;
+    }
+}
